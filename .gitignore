@@ -6,6 +6,7 @@
 *.json
 !package.json
 !package-lock.json
+!glama.json
 .secrets/
 operator-agent.json
 mcp-registry-*
