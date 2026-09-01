@@ -29,8 +29,13 @@ function spawnDocs() {
     });
   }
   const cli = npxCli();
-  if (!cli) throw new Error('npx-cli.js not found next to node');
-  return spawn(process.execPath, [cli, '-y', `--package=${PKG}@0.1.4`, BIN], {
+  if (cli) {
+    return spawn(process.execPath, [cli, '-y', `--package=${PKG}@0.1.4`, BIN], {
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: { ...process.env, npm_config_update_notifier: 'false' },
+    });
+  }
+  return spawn('npx', ['-y', `--package=${PKG}@0.1.4`, BIN], {
     stdio: ['pipe', 'pipe', 'pipe'],
     env: { ...process.env, npm_config_update_notifier: 'false' },
   });
