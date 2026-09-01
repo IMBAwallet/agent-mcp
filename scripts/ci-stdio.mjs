@@ -30,12 +30,12 @@ function spawnDocs() {
   }
   const cli = npxCli();
   if (cli) {
-    return spawn(process.execPath, [cli, '-y', `--package=${PKG}@0.1.4`, BIN], {
+    return spawn(process.execPath, [cli, '-y', `--package=${PKG}@0.1.5`, BIN], {
       stdio: ['pipe', 'pipe', 'pipe'],
       env: { ...process.env, npm_config_update_notifier: 'false' },
     });
   }
-  return spawn('npx', ['-y', `--package=${PKG}@0.1.4`, BIN], {
+  return spawn('npx', ['-y', `--package=${PKG}@0.1.5`, BIN], {
     stdio: ['pipe', 'pipe', 'pipe'],
     env: { ...process.env, npm_config_update_notifier: 'false' },
   });
@@ -111,15 +111,15 @@ try {
   const init = await mcp.send('initialize', {
     protocolVersion: PROTOCOL,
     capabilities: {},
-    clientInfo: { name: 'imba-agent-mcp-ci', version: '0.1.4' },
+    clientInfo: { name: 'imba-agent-mcp-ci', version: '0.1.5' },
   });
   if (init.error) throw new Error(`initialize: ${JSON.stringify(init.error)}`);
   mcp.notify('notifications/initialized');
   const listed = await mcp.send('tools/list', {});
   if (listed.error) throw new Error(`tools/list: ${JSON.stringify(listed.error)}`);
   const names = (listed.result?.tools ?? []).map((t) => t.name);
-  if (!names.includes('get_agent_facts')) {
-    throw new Error(`docs MCP missing get_agent_facts: ${names.join(', ')}`);
+  if (!names.includes('get_agent_facts') || !names.includes('get_agent_use_cases')) {
+    throw new Error(`docs MCP missing playbook tools: ${names.join(', ')}`);
   }
   console.error(`docs MCP ok (${mode}): ${names.join(', ')}`);
 } finally {

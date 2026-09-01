@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "imba-agent",
+  "version": "0.1.5",
+  "description": "Prepaid IMBA Agent API: docs MCP for Visa prepaid, travel eSIM, gift cards, and KYT playbooks. Spend MCP uses the operator Ed25519 key. No withdraw.",
+  "author": {
+    "name": "IMBA Wallet",
+    "email": "support@imbawallet.com",
+    "url": "https://imbawallet.com"
+  },
+  "homepage": "https://imbawallet.com/agent_api_about_en.html",
+  "repository": "https://github.com/IMBAwallet/agent-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "imba", "agent-api", "esim", "gift-cards", "prepaid-visa", "usdt"]
+}

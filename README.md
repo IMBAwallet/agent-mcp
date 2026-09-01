@@ -34,7 +34,7 @@ ChatGPT Actions must not call spend.
 Docs (no secrets):
 
 ```bash
-npx -y @imba_wallet/agent-mcp-docs
+npx -y @imba_wallet/agent-mcp-docs@0.1.5
 ```
 
 ```json
@@ -42,7 +42,7 @@ npx -y @imba_wallet/agent-mcp-docs
   "mcpServers": {
     "imba-agent-docs": {
       "command": "npx",
-      "args": ["-y", "@imba_wallet/agent-mcp-docs"]
+      "args": ["-y", "@imba_wallet/agent-mcp-docs@0.1.5"]
     }
   }
 }
@@ -64,6 +64,15 @@ Spend (operator key):
   }
 }
 ```
+
+Claude Code marketplace (this repo):
+
+```text
+/plugin marketplace add IMBAwallet/agent-mcp
+/plugin install imba-agent@imba-agent
+```
+
+Agent skill: `npx skills add IMBAwallet/agent-mcp --skill imba-agent`
 
 ## Docker
 

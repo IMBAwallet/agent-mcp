@@ -1,0 +1,15 @@
+{
+  "name": "imba-agent",
+  "description": "IMBA prepaid Agent API docs MCP (Visa, eSIM, gift-card playbooks), plus optional spend MCP with the operator key. No withdraw. Not a ChatGPT money plugin.",
+  "version": "0.1.5",
+  "author": {
+    "name": "IMBA Wallet",
+    "email": "support@imbawallet.com"
+  },
+  "homepage": "https://imbawallet.com/agent_api_about_en.html",
+  "repository": "https://github.com/IMBAwallet/agent-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "imba", "agent-api", "esim", "gift-cards", "prepaid-visa"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json"
+}

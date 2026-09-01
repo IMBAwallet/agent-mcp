@@ -1,0 +1,9 @@
+{
+  "groupings": [
+    {
+      "title": "IMBA Agent",
+      "description": "Prepaid Agent API: Visa, eSIM, gift cards, KYT.",
+      "skills": ["imba-agent"]
+    }
+  ]
+}

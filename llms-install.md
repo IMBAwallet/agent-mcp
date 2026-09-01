@@ -5,7 +5,7 @@ Cline and other agents: use this file plus README.md. Public repo only. No API k
 ## Docs (default, no secrets)
 
 ```bash
-npx -y @imba_wallet/agent-mcp-docs@0.1.4
+npx -y @imba_wallet/agent-mcp-docs@0.1.5
 ```
 
 ```json
@@ -13,7 +13,7 @@ npx -y @imba_wallet/agent-mcp-docs@0.1.4
   "mcpServers": {
     "imba-agent-docs": {
       "command": "npx",
-      "args": ["-y", "@imba_wallet/agent-mcp-docs@0.1.4"]
+      "args": ["-y", "@imba_wallet/agent-mcp-docs@0.1.5"]
     }
   }
 }

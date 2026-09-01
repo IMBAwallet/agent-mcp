@@ -7,6 +7,12 @@
 !package.json
 !package-lock.json
 !glama.json
+!plugin.json
+!mcp.json
+!.mcp.json
+!skills.sh.json
+!.claude-plugin/plugin.json
+!.claude-plugin/marketplace.json
 .secrets/
 operator-agent.json
 mcp-registry-*

@@ -1,0 +1,23 @@
+{
+  "name": "imba-agent",
+  "owner": {
+    "name": "IMBA Wallet",
+    "email": "support@imbawallet.com"
+  },
+  "metadata": {
+    "description": "IMBA Agent MCP. Docs is public; spend uses the operator Ed25519 key. No withdraw. Not a ChatGPT money plugin.",
+    "version": "0.1.5"
+  },
+  "plugins": [
+    {
+      "name": "imba-agent",
+      "source": ".",
+      "description": "IMBA prepaid Agent API: docs MCP plus optional spend MCP (USDT TRC-20 + catalog). No withdraw. Not a ChatGPT money plugin.",
+      "version": "0.1.5",
+      "homepage": "https://imbawallet.com/agent_api_about_en.html",
+      "repository": "https://github.com/IMBAwallet/agent-mcp",
+      "license": "MIT",
+      "keywords": ["mcp", "imba", "agent-api", "usdt", "docs"]
+    }
+  ]
+}
