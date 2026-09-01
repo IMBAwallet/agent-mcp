@@ -11,6 +11,7 @@
 !mcp.json
 !.mcp.json
 !skills.sh.json
+!lhm.plugin.json
 !.claude-plugin/plugin.json
 !.claude-plugin/marketplace.json
 .secrets/

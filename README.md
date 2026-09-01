@@ -101,3 +101,7 @@ Repo: [glama.ai/mcp/servers/IMBAwallet/agent-mcp](https://glama.ai/mcp/servers/I
 4. **Make Release** against the **root `Dockerfile`** (docs). Do not release `Dockerfile.spend` in Glama — the sandbox has no operator key.
 
 Quality grades (tool definitions / coherence) appear only after that Glama release, not after a GitHub tag.
+
+## Owner-match catalog copy
+
+LobeHub (and similar) require the GitHub user to **own** the listing repo. Mirror packaging (no secrets) lives at [clnt2021/imba_agent_mcp](https://github.com/clnt2021/imba_agent_mcp). When `plugin.json`, `mcp.json`, skills, Dockerfiles, or `lhm.plugin.json` change, update **both** repos. Wallet SSOT: `docs/features/agent_mcp.md`.

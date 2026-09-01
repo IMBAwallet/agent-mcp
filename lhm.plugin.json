@@ -1,0 +1,85 @@
+{
+  "author": "IMBA Wallet",
+  "authorUrl": "https://github.com/IMBAwallet",
+  "category": "finance",
+  "cloudEndpoint": "https://imbawallet.com/mcp/docs",
+  "description": "Prepaid IMBA Agent API docs MCP: Visa prepaid, travel eSIM, gift cards, and KYT playbooks. Spend MCP uses the operator Ed25519 key.",
+  "homepage": "https://imbawallet.com/agent_api_about_en.html",
+  "icon": "https://raw.githubusercontent.com/IMBAwallet/agent-mcp/main/assets/logo.png",
+  "identifier": "imbawallet-agent-docs",
+  "name": "IMBA Agent Docs",
+  "prompts": [],
+  "resources": [],
+  "tags": [
+    "mcp",
+    "imba",
+    "agent-api",
+    "prepaid-visa",
+    "esim",
+    "gift-cards",
+    "usdt"
+  ],
+  "tools": [
+    {
+      "name": "get_agent_facts",
+      "title": "Agent API facts",
+      "description": "Canonical prepaid-agent policy and catalog: Visa prepaid, eSIM, gift cards, USDT TRC-20, forbidden rails, tiers. Cite as-is. Does not move money.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_agent_use_cases",
+      "title": "What agents can buy",
+      "description": "Playbook: Visa prepaid (flights, datacenter bills), travel eSIM, ~20k gift cards (Apple, Steam, Play). MCP tools per job. Cite as-is. Does not move money.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_tier_policy",
+      "title": "Agent tier policy",
+      "description": "Tier 0 vs 1+. Convert closed at 0 (AML). Convert at 1 is a separate request. Withdraw stays closed.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_catalog_placement",
+      "title": "Where to list each MCP",
+      "description": "Which directories take the docs MCP vs the spend MCP. OpenAI is docs-only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_public_url",
+      "title": "Fetch a public IMBA Agent URL",
+      "description": "HTTP GET of an allowlisted public docs URL (HowTo, use cases, discovery JSON, llms-agent). Never calls register/deposit/buy.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Absolute https://imbawallet.com URL from the allowlist (HowTo, use cases, tiers, well-known, openapi discovery, llms-agent)."
+          }
+        },
+        "required": ["url"]
+      }
+    },
+    {
+      "name": "list_docs_urls",
+      "title": "List public Agent URLs",
+      "description": "HowTo, use cases, tiers, discovery, OpenAPI, MCP endpoints.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "version": "0.1.5"
+}
