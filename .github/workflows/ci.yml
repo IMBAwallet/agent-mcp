@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  docs-stdio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - name: Docs MCP initialize (npx)
+        run: node scripts/ci-stdio.mjs npx
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build default Dockerfile (Glama)
+        run: docker build -t imba-agent-docs .
+      - name: Build docs alias
+        run: docker build -f Dockerfile.docs -t imba-agent-docs-alias .
+      - name: Build spend (no run — needs operator key)
+        run: docker build -f Dockerfile.spend -t imba-agent-spend .
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - name: Docs MCP initialize (docker)
+        run: node scripts/ci-stdio.mjs docker

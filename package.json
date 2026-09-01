@@ -1,0 +1,33 @@
+{
+  "name": "imba-agent-mcp-docker",
+  "version": "0.1.4",
+  "private": true,
+  "description": "Stdio Docker images for IMBA Agent MCP. Default: docs (Visa/eSIM/gift playbooks). Spend image needs the operator Ed25519 key.",
+  "license": "MIT",
+  "homepage": "https://imbawallet.com/agent_use_cases_about_en.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMBAwallet/agent-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IMBAwallet/agent-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "imba",
+    "agentic-wallet",
+    "prepaid-visa",
+    "esim",
+    "gift-cards",
+    "usdt"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "npx -y @imba_wallet/agent-mcp-docs@0.1.4",
+    "start:docs": "npx -y @imba_wallet/agent-mcp-docs@0.1.4",
+    "start:spend": "npx -y @imba_wallet/agent-mcp@0.1.4",
+    "test": "node scripts/ci-stdio.mjs npx"
+  }
+}

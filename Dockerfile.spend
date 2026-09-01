@@ -1,6 +1,6 @@
 FROM node:22-alpine
 LABEL org.opencontainers.image.source="https://github.com/IMBAwallet/agent-mcp"
-LABEL org.opencontainers.image.description="IMBA Agent Spend MCP (operator Ed25519 key; no withdraw)"
+LABEL org.opencontainers.image.description="IMBA Agent Spend MCP: Visa prepaid, eSIM, ~20k gift cards with USDT. No withdraw."
 LABEL io.modelcontextprotocol.server.name="com.imbawallet/agent"
 RUN npm install -g @imba_wallet/agent-mcp@0.1.4 \
   && npm cache clean --force
